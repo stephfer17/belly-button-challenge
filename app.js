@@ -78,7 +78,7 @@ function startup (){
     menunames.forEach((id) => {
       selectmenu.append("option").text(id).property("value",id);
   });
-  // making a varabile to call on the functions 
+  // making a varabile to call on the functions helped from ASKBSC
   let testvalue = menunames[0];
   // using it on the all the functions 
    infobbox(testvalue);
@@ -86,7 +86,7 @@ function startup (){
    samplebubble(testvalue);
   });
 };
-// to change the values and the resepect charts 
+// to change the values and the resepect charts helped from ASKBSC
 function optionChanged (changed){
   infobbox(changed);
   samplebar(changed);
