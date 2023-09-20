@@ -52,6 +52,7 @@ function samplebubble(sample){
   let bubblevalues = datavalues.filter(item => item.id==sample);
   // get the info from the index 
   let graphvalues = bubblevalues[0];
+  //https://plotly.com/javascript/bubble-charts/ got the format from here 
   let trace1 = {
   x:graphvalues.otu_ids,
   y:graphvalues.sample_values ,
