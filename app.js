@@ -8,15 +8,15 @@ d3.json(url).then(function(data) {
 function infobbox (sample) { 
 d3.json(url).then(function(data) {
 // getting the data
-let info_meta = data.metadata;
+let infometa = data.metadata;
 // fitler 
-let fitler_meta =info_meta.filter(item => item.id = sample);
+let fitlermeta =infometa.filter(item => item.id == sample);
 // get the info from the index
-let info_results = fitler_meta[0];
+let inforesults = fitlermeta[0];
 // clearing out the table 
 d3.select("#sample-metadata").html("");
 //using objects to get the values and the keys 
-object.entries(info_results).forEach(([key,value])=>{
+Object.entries(inforesults).forEach(([key,value])=>{
 d3.select("#sample-metadata").append("h5").text((`${key}: ${value}`));
 });
 });
@@ -87,7 +87,7 @@ function startup (){
   });
 };
 // to change the values and the resepect charts 
-function Change(changed){
+function optionChanged (changed){
   infobbox(changed);
   samplebar(changed);
   samplebubble(changed);
